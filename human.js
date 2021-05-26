@@ -8,3 +8,5 @@ class Human extends Player{
         super(name);
     }
 }
+
+module.exports.Human = Human;
