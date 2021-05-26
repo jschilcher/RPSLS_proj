@@ -9,13 +9,13 @@ class Player{
         this.gestureArray = ["rock", "paper", "scissors", "lizard", "spock"];
     }
     chooseGesture(){
-        //choose gesture human pick a gesture computer random select
         let userGesture = prompt("Please choose your gesture");
+
         //TODO: Figure out a way to use user input to choose a gesture!
         // HINT: We need to figure out a way to map that input to the index of an array
-        return userGesture;
+        return this.gestureArray[userGesture];
     }
-    
+
 }
 
 module.exports.Player = Player;
