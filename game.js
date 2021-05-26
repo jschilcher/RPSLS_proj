@@ -1,3 +1,4 @@
 "use strict";
 
-const { Player } = require("./player");
+const { Human } = require("./human");
+const { Computer } = require("./Computer");

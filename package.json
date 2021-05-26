@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/jschilcher/RPSLS_proj/issues"
   },
-  "homepage": "https://github.com/jschilcher/RPSLS_proj#readme"
+  "homepage": "https://github.com/jschilcher/RPSLS_proj#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
