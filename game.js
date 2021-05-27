@@ -2,14 +2,17 @@
 
 const { Human } = require("./human");
 const { Computer } = require("./Computer");
+const { Player } = require("./player");
 
 class Game{
     constructor(){
-
+        this.playerOne = new Human("Jenelle");
+        this.playerTwo;
 
     }
 
     runGame(){
+        this.displayRules
         //switch case with rpsls rules?
         //Put welcome with rules. Function?
         //Single player or multi
@@ -26,12 +29,12 @@ class Game{
         console.log("To pick Spock type 4");
     }
 
-    singleOrMulti(){
-        let welcomePlayer = prompt("single player or mulitplayer?");
-        switch(welcomePlayer){
-            //case single and multi
-        }
-    }
+    // singleOrMulti(){
+    //     let welcomePlayer = prompt("single player or mulitplayer?");
+    //     switch(welcomePlayer){
+    //         //case single and multi
+    //     }
+    // }
 
 
 }
