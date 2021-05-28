@@ -8,6 +8,13 @@ class Human extends Player{
         super(name);
         this.chooseGesture();
     }
+    chooseGesture(){
+        this.gestureChoice = prompt("Please choose your gesture");
+        while(this.gestureChoice > 4){
+            this.gestureChoice = prompt("Please choose a correct gesture!");
+        }
+        return this.gestureArray[gestureChoice];
+    }
 }
 
 module.exports.Human = Human;

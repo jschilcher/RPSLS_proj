@@ -3,23 +3,28 @@
 const { Human } = require("./human");
 const { Computer } = require("./Computer");
 const { Player } = require("./player");
+const prompt = require('prompt-sync')();
 
 class Game{
     constructor(){
-        this.playerOne = new Human("Jenelle");
-        this.playerTwo = this.singleOrMulti//can I call a multi or single player function here?
+        this.playerOne;
+        this.playerTwo;
 
     }
 
     runGame(){
-        this.displayRules
-
-        while(this.playerOne.score < 3 && this.playerTwo < 3)
-        //switch case
-        switch(){
-            case "rock":
-
+        this.displayRules();
+        this.singleOrMulti();
+        while(this.playerOne.score < 3 && this.playerTwo.score < 3){
+            for (let i = 0; i < 4 ; i++) {
+                this.playerOne.score++
+            }
         }
+        //switch case
+        // switch(){
+        //     case "rock":
+
+        // }
         //Single player or multi
     }
 
@@ -35,18 +40,34 @@ class Game{
     }
 
     singleOrMulti(){
-        let welcomePlayer = prompt("single player or multiplayer?");
+        let welcomePlayer = prompt("single player or multiplayer?").toLowerCase();
         switch(welcomePlayer){
-            //case single and multi
             case "single player":
-                console.log("Single player selected")
+                console.log("Single player selected");
+                this.singleHumanSingleComputerBuilder();
                 break;
             case "multiplayer":
+                console.log("Multiplayer selected");
+                this.multiplayerBuilder();
                 break;
             default:
                 welcomePlayer = prompt("please type single player or multiplayer...");
                 break;    
         }
+    }
+
+    singleHumanSingleComputerBuilder(){
+        this.playerOne = new Human("Jenelle");
+        console.log(this.playerOne.name);
+        this.playerTwo = new Computer("Ralph");
+        console.log(this.playerTwo.name);
+    }
+
+    multiplayerBuilder(){
+        this.playerOne = new Human("Jenelle");
+        console.log(this.playerOne.name);
+        this.playerTwo = new Human("Aaron");
+        console.log(this.playerTwo.name);
     }
 
     displayWinner(){

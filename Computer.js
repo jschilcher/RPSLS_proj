@@ -8,8 +8,8 @@ class Computer extends Player{
     }
     computerRandomGesture(array){
         let randomIndex = Math.floor(Math.random() * array.length);
-        let computerGesture = array[randomIndex]
-        return computerGesture;
+        this.gestureChoice = array[randomIndex]
+        return this.gestureChoice;
     }
 
 }
