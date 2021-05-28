@@ -20,12 +20,12 @@ class Game{
                 this.playerOne.score++
             }
         }
-        //switch case
-        // switch(){
-        //     case "rock":
+        if(this.playerOne.gestureChoice == "rock")
+        switch(this.gestureChoice){
+            case "rock":
 
-        // }
-        //Single player or multi
+        }
+        
     }
 
     displayRules(){
@@ -51,7 +51,7 @@ class Game{
                 this.multiplayerBuilder();
                 break;
             default:
-                welcomePlayer = prompt("please type single player or multiplayer...");
+                welcomePlayer = prompt("please type single player or multiplayer...").toLowerCase();
                 break;    
         }
     }

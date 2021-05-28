@@ -9,11 +9,11 @@ class Human extends Player{
         this.chooseGesture();
     }
     chooseGesture(){
-        this.gestureChoice = prompt("Please choose your gesture");
+        this.gestureChoice = prompt("Please choose your gesture").toLowerCase();
         while(this.gestureChoice > 4){
-            this.gestureChoice = prompt("Please choose a correct gesture!");
+            this.gestureChoice = prompt("Please choose a correct gesture!").toLowerCase();
         }
-        return this.gestureArray[gestureChoice];
+        return this.gestureArray[this.gestureChoice];
     }
 }
 
