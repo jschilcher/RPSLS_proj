@@ -73,6 +73,39 @@ class Game{
         if(this.playerOne.gestureChoice === this.playerTwo.gestureChoice){
             console.log("It's a tie!");
         }
+        else if(this.playerOne.gestureChoice === "rock"){
+            if(this.playerTwo.gestureChoice === "paper"){
+                console.log(this.playerTwo.name + "wins!");
+            }
+            else if(this.playerTwo.gestureChoice === "scissors"){
+                console.log(this.playerOne.name + "wins!!");
+            }
+            else if(this.playerTwo.gestureChoice === "lizard"){
+                console.log(this.playerOne.name + "wins!");
+            }
+            else if(this.playerTwo.gestureChoice === "spock"){
+                console.log(this.playerTwo.name + "wins!");
+            }
+        }    
+        else if(this.playerOne.gestureChoice === "paper"){
+            if(this.playerTwo.gestureChoice === "rock"){
+                console.log(this.playerOne.name + "wins!");
+            }
+            else if(this.playerTwo.gestureChoice === "scissors"){
+                console.log(this.playerTwo.name + "is the winner!");
+            }
+            else if(this.playerTwo.gestureChoice === "lizard"){
+                console.log(this.playerTwo.name + "wins!");
+            }
+            else if(this.playerTwo.gestureChoice === "spock"){
+                console.log(this.playerOne.name + "is the winner!");
+            }
+        }    
+        else if(this.playerOne.gestureChoice === "scissors"){
+            if(this.playerTwo.gestureChoice === "rock"){
+                console.log(this.playerTwo.name + "wins!");
+            }
+        }    
     }
 
     displayWinner(){
