@@ -20,11 +20,10 @@ class Game{
                 this.playerOne.score++
             }
         }
-        if(this.playerOne.gestureChoice == "rock")
-        switch(this.gestureChoice){
-            case "rock":
 
-        }
+        this.compareGesture();
+        this.displayWinner();
+
         
     }
 
@@ -68,6 +67,12 @@ class Game{
         console.log(this.playerOne.name);
         this.playerTwo = new Human("Aaron");
         console.log(this.playerTwo.name);
+    }
+
+    compareGesture(){
+        if(this.playerOne.gestureChoice === this.playerTwo.gestureChoice){
+            console.log("It's a tie!");
+        }
     }
 
     displayWinner(){
