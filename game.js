@@ -16,10 +16,12 @@ class Game{
         this.displayRules();
         this.singleOrMulti();
         while(this.playerOne.score < 3 && this.playerTwo.score < 3){
+            // let playerOneNewGesture = this.playerOne.gestureChoice;
+            // let playerTwoNewGesture = this.playerTwo.gestureChoice;
             for (let i = 0; i < 4 ; i++) {
                 this.playerOne.score++
             }
-        }
+        } 
 
         this.compareGesture();
         this.displayWinner();

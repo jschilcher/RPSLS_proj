@@ -1,6 +1,7 @@
 "use strict";
 
 const { Player } = require("./player");
+const prompt = require('prompt-sync')();
 
 class Human extends Player{
 
@@ -9,10 +10,11 @@ class Human extends Player{
         this.chooseGesture();
     }
     chooseGesture(){
-        this.gestureChoice = prompt("Please choose your gesture").toLowerCase();
+        this.gestureChoice = prompt("Please choose your gesture");
         while(this.gestureChoice > 4){
-            this.gestureChoice = prompt("Please choose a correct gesture!").toLowerCase();
+            this.gestureChoice = prompt("Please choose a correct gesture!");
         }
+        console.log(this.gestureArray[this.gestureChoice]);
         return this.gestureArray[this.gestureChoice];
     }
 }
