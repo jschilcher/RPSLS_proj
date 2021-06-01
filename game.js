@@ -105,6 +105,43 @@ class Game{
             if(this.playerTwo.gestureChoice === "rock"){
                 console.log(this.playerTwo.name + "wins!");
             }
+            else if(this.playerTwo.gestureChoice === "paper"){
+                console.log(this.playerOne.name + "wins!");
+            }
+            else if(this.playerTwo.gestureChoice === "lizard"){
+                console.log(this.playerOne.name + "is the winner!");
+            }
+            else if(this.playerTwo.gestureChoice === "spock"){
+                console.log(this.playerTwo.name + "wins!");
+            }
+        }
+        else if(this.playerOne.gestureChoice === "lizard"){
+            if(this.playerTwo.gestureChoice === "rock"){
+                console.log(this.playerTwo.name + "wins!!");
+            }
+            else if(this.playerTwo.gestureChoice === "paper"){
+                console.log(this.playerOne.name + "wins!");
+            }
+            else if(this.playerTwo.gestureChoice === "scissors"){
+                console.log(this.playerTwo + "is the winner");
+            }
+            else if(this.playerTwo.gestureChoice === "spock"){
+                console.log(this.playerOne.name + "wins!!");
+            }
+        }
+        else if(this.playerOne.gestureChoice === "spock"){
+            if(this.playerTwo.gestureChoice === "rock"){
+                console.log(this.playerOne.name + "wins!");
+            }
+            else if(this.playerTwo.gestureChoice === "paper"){
+                console.log(this.playerTwo.name + "wins!!");
+            }
+            else if(this.playerTwo.gestureChoice === "scissors"){
+                console.log(this.playerOne.name + "wins!");
+            }
+            else if(this.playerTwo.gestureChoice === "lizard"){
+                console.log(this.playerTwo.name + "is the winner!");
+            }
         }    
     }
 
